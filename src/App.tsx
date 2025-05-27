@@ -6,10 +6,17 @@
 // import ArrowFunctionComponentWithPropsTypes from "./components/ArrowFunctionalComponentWithPropsTypes.tsx";
 // import CodingFactoryLogo from "./components/CodingFactoryLogo.tsx";
 import Layout from "./components/Layout.tsx";
+import CounterWithReducer from "./components/CounterWithReducer.tsx";
+// import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
+// import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
+// import CounterAdvanced from "./components/CounterAdvanced.tsx";
+// import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
+// import NameChanger from "./components/NameChanger.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
-import Counter from "./components/Counter.tsx";
+// import Counter from "./components/Counter.tsx";
 
+// import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
 function App() {
 
     return (
@@ -23,9 +30,16 @@ function App() {
                {/*<ArrowFunctionComponentWithProps title={"is Arrow Component with Props"}/>*/}
                {/*<ArrowFunctionComponentWithPropsTypes title={"is Arrow Component with Props"} description={"this is a description"} />*/}
                {/*<FunctionalComponentWithState/>*/}
-               <Counter/>
-
+               {/*<Counter/>*/}
+               {/* <NameChanger/>*/}
                {/*<ClassComponentWithState/>*/}
+
+               {/*<CounterWithMoreStates/>*/}
+               {/*<CounterAdvanced/>*/}
+               {/*<CounterWithCustomHook />*/}
+               {/*<CounterAdvancedWithCustomHook/>*/}
+               {/*<CounterWithCustomHook />*/}
+               <CounterWithReducer />
            </Layout>
 
 
