@@ -6,7 +6,8 @@
 // import ArrowFunctionComponentWithPropsTypes from "./components/ArrowFunctionalComponentWithPropsTypes.tsx";
 // import CodingFactoryLogo from "./components/CodingFactoryLogo.tsx";
 import Layout from "./components/Layout.tsx";
-import CounterWithReducer from "./components/CounterWithReducer.tsx";
+import Todo from "./components/Todo/Todo.tsx";
+// import CounterWithReducer from "./components/CounterWithReducer.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
@@ -39,7 +40,9 @@ function App() {
                {/*<CounterWithCustomHook />*/}
                {/*<CounterAdvancedWithCustomHook/>*/}
                {/*<CounterWithCustomHook />*/}
-               <CounterWithReducer />
+               {/*<CounterWithReducer />*/}
+
+               <Todo/>
            </Layout>
 
 
