@@ -12,6 +12,10 @@ const NameChanger = () =>{
         setName(e.target.value);
     }
 
+  useEffect (()=>{
+      const id : number = setInterval(()=>console.log("tick"),1000)
+      return () => clearInterval(id)
+  }, [])
 
     return  (
         <>
