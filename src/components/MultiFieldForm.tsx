@@ -73,7 +73,8 @@ const MultiFieldForm = () =>{
                 name="message"
                 onChange={handleChange}
                 value={values.message}
-                required>
+                required
+                minLength={5}>
                 </textarea>
 
                 <div className="flex gap-4 mx-auto justify-center">
