@@ -14,12 +14,13 @@ import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./pages/UserPage.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
-import ExamplesPage from "./pages/ExamplesPage.tsx";
+// import ExamplesPage from "./pages/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 // import FocusInput from "./components/FocusInput.tsx";
-import UncontrolledInput from "./components/UncontrolledInput.tsx";
+// import UncontrolledInput from "./components/UncontrolledInput.tsx";
+import MultiFieldForm from "./components/MultiFieldForm.tsx";
 // import Todo from "./components/Todo/Todo.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
@@ -63,9 +64,10 @@ function App() {
              <Routes>
                 {/*<Route path="/" element={<HomePage/>}/>*/}
                  <Route element={<RouterLayout/>}>
+                     <Route index element={<MultiFieldForm/>}/>
                      {/*<Route index element={<HomePage/>}/>*/}
                      {/*<Route index element={<FocusInput/>}/>*/}
-                     <Route index element={<UncontrolledInput/>}/>
+                     {/*<Route index element={<UncontrolledInput/>}/>*/}
                      <Route path="users/:userId" element={<UserPage />}/> {/* Path params*/}
 
                      <Route path="users" element={<UserPage/>} />   {/* query params*/}
@@ -76,7 +78,7 @@ function App() {
 
                  {/*<Route path="examples?"/>*/}
                  <Route path="examples" element={<RouterExamplesLayout />}>
-                     <Route index element={<ExamplesPage/>}/>
+
                      <Route path="auto-redirect" element={<AutoRedirectPage/>}/>
                      <Route path="name-changer" element={<NameChangerPage/>}/>
                      <Route path="online-status" element={<OnlineStatusPage/>}/>
