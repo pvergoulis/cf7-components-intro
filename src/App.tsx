@@ -21,7 +21,8 @@ import NotFoundPage from "./pages/NotFoundPage.tsx";
 // import FocusInput from "./components/FocusInput.tsx";
 // import UncontrolledInput from "./components/UncontrolledInput.tsx";
 // import MultiFieldForm from "./components/MultiFieldForm.tsx";
-import MultiFieldFormWithValidation from "./components/MultiFieldFormWithValidation.tsx";
+// import MultiFieldFormWithValidation from "./components/MultiFieldFormWithValidation.tsx";
+import MultiFieldFormWithZodValidation from "./components/MultiFieldFormWithZodValidation.tsx";
 // import Todo from "./components/Todo/Todo.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
@@ -65,7 +66,7 @@ function App() {
              <Routes>
                 {/*<Route path="/" element={<HomePage/>}/>*/}
                  <Route element={<RouterLayout/>}>
-                     <Route index element={<MultiFieldFormWithValidation/>}/>
+                     <Route index element={<MultiFieldFormWithZodValidation/>}/>
                      {/*<Route index element={<HomePage/>}/>*/}
                      {/*<Route index element={<FocusInput/>}/>*/}
                      {/*<Route index element={<UncontrolledInput/>}/>*/}
