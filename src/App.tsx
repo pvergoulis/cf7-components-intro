@@ -8,22 +8,23 @@
 // import Layout from "./components/Layout.tsx";
 // import OnlineStatus from "./components/OnlineStatus.tsx";
 import {BrowserRouter, Route, Routes} from "react-router";
-import HomePage from "./pages/HomePage.tsx";
-import NameChangerPage from "./pages/NameChangerPage.tsx";
+// import HomePage from "./pages/HomePage.tsx";
+// import NameChangerPage from "./pages/NameChangerPage.tsx";
 // import Layout from "./components/Layout.tsx";
-import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
-import UserPage from "./pages/UserPage.tsx";
+// import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
+// import UserPage from "./pages/UserPage.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
 // import ExamplesPage from "./pages/ExamplesPage.tsx";
-import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
-import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
-import NotFoundPage from "./pages/NotFoundPage.tsx";
+// import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
+// import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
+// import NotFoundPage from "./pages/NotFoundPage.tsx";
 // import FocusInput from "./components/FocusInput.tsx";
 // import UncontrolledInput from "./components/UncontrolledInput.tsx";
 // import MultiFieldForm from "./components/MultiFieldForm.tsx";
 // import MultiFieldFormWithValidation from "./components/MultiFieldFormWithValidation.tsx";
 // import MultiFieldFormWithZodValidation from "./components/MultiFieldFormWithZodValidation.tsx";
-import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHook.tsx";
+// import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHook.tsx";
+import ProductList from "@/pages/ProductList.tsx";
 // import Todo from "./components/Todo/Todo.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
@@ -34,7 +35,7 @@ import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHoo
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import Counter from "./components/Counter.tsx";
-
+import Product from "@/pages/Product.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
 function App() {
 
@@ -66,32 +67,37 @@ function App() {
             {/*<Layout>*/}
              <Routes>
                 {/*<Route path="/" element={<HomePage/>}/>*/}
-                 <Route element={<RouterLayout/>}>
-                     <Route index element={<MultiFieldFormWithReactHook/>}/>
-                     {/*<Route index element={<HomePage/>}/>*/}
-                     {/*<Route index element={<FocusInput/>}/>*/}
-                     {/*<Route index element={<UncontrolledInput/>}/>*/}
-                     <Route path="users/:userId" element={<UserPage />}/> {/* Path params*/}
+                {/* <Route element={<RouterLayout/>}>*/}
+                {/*     <Route index element={<MultiFieldFormWithReactHook/>}/>*/}
+                {/*     /!*<Route index element={<HomePage/>}/>*!/*/}
+                {/*     /!*<Route index element={<FocusInput/>}/>*!/*/}
+                {/*     /!*<Route index element={<UncontrolledInput/>}/>*!/*/}
+                {/*     <Route path="users/:userId" element={<UserPage />}/> /!* Path params*!/*/}
 
-                     <Route path="users" element={<UserPage/>} />   {/* query params*/}
-                </Route>
+                {/*     <Route path="users" element={<UserPage/>} />   /!* query params*!/*/}
+                {/*</Route>*/}
 
-                 <Route index element={<HomePage/>}/>
-                <Route path="/name-changer" element={<NameChangerPage/>}/>
+                {/* <Route index element={<HomePage/>}/>*/}
+                {/*<Route path="/name-changer" element={<NameChangerPage/>}/>*/}
 
                  {/*<Route path="examples?"/>*/}
-                 <Route path="examples" element={<RouterExamplesLayout />}>
+                 {/*<Route path="examples" element={<RouterExamplesLayout />}>*/}
 
-                     <Route path="auto-redirect" element={<AutoRedirectPage/>}/>
-                     <Route path="name-changer" element={<NameChangerPage/>}/>
-                     <Route path="online-status" element={<OnlineStatusPage/>}/>
-                 </Route>
+                 {/*    <Route path="auto-redirect" element={<AutoRedirectPage/>}/>*/}
+                 {/*    <Route path="name-changer" element={<NameChangerPage/>}/>*/}
+                 {/*    <Route path="online-status" element={<OnlineStatusPage/>}/>*/}
+                 {/*</Route>*/}
 
 
 
                  {/*<Route path="files/*" element={<FilePage/>}/>*/}
 
-                 <Route path="*" element={<NotFoundPage/>}/>
+                 {/*<Route path="*" element={<NotFoundPage/>}/>*/}
+                 <Route path="/products" element={<RouterLayout/>}>
+                     <Route index element={<ProductList/>}/>
+                     {/*<Route path="new" element={<Product/>}/>*/}
+                     <Route path=":productId" element={<Product/>}/>
+                 </Route>
              </Routes>
             {/*</Layout>*/}
         </BrowserRouter>
