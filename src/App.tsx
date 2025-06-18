@@ -25,6 +25,7 @@ import RouterLayout from "./components/RouterLayout.tsx";
 // import MultiFieldFormWithZodValidation from "./components/MultiFieldFormWithZodValidation.tsx";
 // import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHook.tsx";
 import ProductList from "@/pages/ProductList.tsx";
+import Product from "@/pages/Product.tsx";
 // import Todo from "./components/Todo/Todo.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
@@ -35,7 +36,8 @@ import ProductList from "@/pages/ProductList.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import Counter from "./components/Counter.tsx";
-import Product from "@/pages/Product.tsx";
+// import Product from "@/pages/Product.tsx";
+// import { Product } from "@/pages/Product.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
 function App() {
 
@@ -95,8 +97,8 @@ function App() {
                  {/*<Route path="*" element={<NotFoundPage/>}/>*/}
                  <Route path="/products" element={<RouterLayout/>}>
                      <Route index element={<ProductList/>}/>
-                     {/*<Route path="new" element={<Product/>}/>*/}
-                     <Route path=":productId" element={<Product/>}/>
+                     <Route path="new" element={<Product mode="create"/>}/>
+                     <Route path=":productId" element={<Product mode="edit"/>}/>
                  </Route>
              </Routes>
             {/*</Layout>*/}
